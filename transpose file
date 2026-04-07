@@ -1,0 +1,1 @@
+awk '{for(i=1;i<=NF;i++) a[i,NR]=$i; rows=NR; cols=NF} END{for(i=1;i<=cols;i++) {for(j=1;j<=rows;j++) printf "%s%s", a[i,j], (j==rows?"\n":" ")}}' file.txt
